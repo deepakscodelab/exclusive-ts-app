@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { useCart, useProduct } from "../hooks";
 
 export function OurProductsList() {
-  const { products, addToWishList } = useProduct();
+  const {
+    state: { products },
+  } = useProduct();
   const { addCartItemsHandler } = useCart();
 
   return (
@@ -29,7 +31,7 @@ export function OurProductsList() {
                 <div className="">
                   <button
                     className="w-[175px] bg-black p-2 font-semibold text-white"
-                    onClick={() => addCartItemsHandler(id, name, img)}
+                    onClick={() => addCartItemsHandler(id, name, img, price)}
                   >
                     Add To Cart
                   </button>
@@ -37,7 +39,7 @@ export function OurProductsList() {
 
                 <div
                   className="absolute right-0 top-0 flex flex-col gap-2 p-2"
-                  onClick={() => addToWishList(id, name, img)}
+                  // onClick={() => addToWishList(id, name, img)}
                 >
                   <i className="fa-regular fa-heart rounded-full bg-white p-2"></i>
                   {/* <i className="fa-regular fa-eye rounded-full bg-white p-2"></i> */}

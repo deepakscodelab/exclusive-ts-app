@@ -16,7 +16,7 @@ export async function getProductItems(): Promise<Product[]> {
 }
 
 export async function getCartItems(): Promise<Cart[]> {
-  const res = await axios.get("http://localhost:3000/productlists");
+  const res = await axios.get("http://localhost:3000/cart");
   return res.data;
 }
 

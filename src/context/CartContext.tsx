@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { getCartItems } from "../apis";
+import { getCartItems } from "../lib/apis";
 import { Cart, CartContextType } from "../@types/cart";
 
 interface CartProviderProps {
@@ -33,11 +33,13 @@ function CartProvider({ children }: CartProviderProps) {
     selectId: number,
     name: string,
     img: string,
+    price: string,
   ) {
     const payload: Cart = {
       id: selectId,
-      name: name,
-      img: img,
+      name,
+      img,
+      price,
     };
 
     try {

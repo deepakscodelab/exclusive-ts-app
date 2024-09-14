@@ -1,4 +1,7 @@
+import { useCallback } from "react";
+
 export function NewArrival() {
+  const calback = useCallback(() => {});
   return (
     <div className="mt-10 px-20">
       <div className="flex items-center gap-4">

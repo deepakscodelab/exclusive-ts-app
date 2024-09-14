@@ -3,7 +3,6 @@ import { useCart } from "../../hooks";
 
 export function CartItems() {
   const { cart, deleteHandler } = useCart();
-  console.log(cart);
   const navigate = useNavigate();
   return (
     <div className="flex h-[full] w-[1000px]">

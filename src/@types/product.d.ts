@@ -8,9 +8,8 @@ export interface Product {
   rating: string;
 }
 
-export type ProductContextType = {
+export type State = {
   products: Product[];
   isLoading: true | false;
   error: string | null;
-  addToWishList: (selectId: number, name: string, img: string) => void;
 };

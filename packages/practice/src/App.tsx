@@ -1,5 +1,11 @@
+import { ReducerExample } from "./components/Reducer";
+
 function App() {
-  return <div>practice app</div>;
+  return (
+    <div>
+      <ReducerExample />
+    </div>
+  );
 }
 
 export default App;

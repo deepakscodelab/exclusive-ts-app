@@ -1,5 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
-import { getWishlist } from "../../apis";
+import { getWishlist } from "../../lib/apis";
 import WishlistItems from "./WishlistItems";
 
 function Wishlist() {

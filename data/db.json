@@ -69,14 +69,10 @@
   ],
   "cart": [
     {
-      "id": "2",
-      "name": "CANON EOS DSLR Camera",
-      "img": "product10.png"
-    },
-    {
       "id": "3",
       "name": "ASUS FHD Gaming Laptop",
-      "img": "product11.png"
+      "img": "product11.png",
+      "price": 700
     }
   ],
   "wishlist": [
