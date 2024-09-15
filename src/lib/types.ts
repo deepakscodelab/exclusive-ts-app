@@ -1,3 +1,10 @@
+export interface Cart {
+  id: number;
+  name: string;
+  img: string;
+  price: string;
+}
+
 export interface Product {
   id: number;
   name: string;

@@ -1,6 +1,5 @@
 import axios from "axios";
-import { Product } from "../@types/product";
-import { Cart } from "../@types/cart";
+import { Product, Cart } from "../lib/types";
 
 export async function getWishlist() {
   const res = await fetch("http://localhost:3000/wishlist");

@@ -2,11 +2,24 @@ import React from "react";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { getCartItems } from "../lib/apis";
-import { Cart, CartContextType } from "../@types/cart";
+import { Cart } from "../lib/types";
 
 interface CartProviderProps {
   children: React.ReactNode;
 }
+
+export type CartContextType = {
+  cart: Cart[];
+  isLoading: false | true;
+  addCartItemsHandler: (
+    selectId: number,
+    name: string,
+    img: string,
+    price: string,
+  ) => void;
+  deleteHandler: (id: number) => void;
+  error: string | null;
+};
 
 export const CartContext = createContext<CartContextType | []>([]);
 
